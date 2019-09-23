@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7575d8e40a426f43c33d651e1fbe781b",
+    "revision": "769b6128156eb2b1d8b10addbb0c7700",
     "url": "/ATM-APP/index.html"
   },
   {
-    "revision": "65fbfbaae76d30799e62",
-    "url": "/ATM-APP/static/css/main.e25dfe47.chunk.css"
+    "revision": "6312e21d64f76f76c4fa",
+    "url": "/ATM-APP/static/css/main.0cd2465b.chunk.css"
   },
   {
     "revision": "e43529b4682f729af83a",
     "url": "/ATM-APP/static/js/2.01a6428e.chunk.js"
   },
   {
-    "revision": "65fbfbaae76d30799e62",
-    "url": "/ATM-APP/static/js/main.a111a347.chunk.js"
+    "revision": "6312e21d64f76f76c4fa",
+    "url": "/ATM-APP/static/js/main.3d578c39.chunk.js"
   },
   {
     "revision": "fafd04bf271f72473018",
