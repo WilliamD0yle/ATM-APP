@@ -1,0 +1,8 @@
+{
+    "singleQuote": true,
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": true,
+    "tabWidth": 4,
+    "editor.formatOnSave": true,
+    "eslint.autoFixOnSave": true
+}

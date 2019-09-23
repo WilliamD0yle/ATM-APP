@@ -1,0 +1,157 @@
+.App {
+	padding: 0;
+	margin: 0 0 50px 0;
+	text-align: center;
+}
+
+.App-logo {
+	height: 150px;
+}
+
+.App-header {
+	background-color: #282c34;
+	min-height: 150px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.App-link {
+	color: #09d3ac;
+}
+
+.atm {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	margin-left: 25%; 
+	margin-right: 25%; 
+	margin-top: 50px;
+	background-color: slategrey;
+	border-radius: 5px;
+}
+
+.display {
+	display: flex;
+	flex-direction: row;
+	height: 100px;
+	width: 95%;
+	background-color: #282c34;
+	margin: 2.5%;
+	border-radius: 2.5px;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	color: chartreuse;
+}
+
+.mainDisplay {
+	animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+	50% {
+	  opacity: 0;
+	}
+}
+
+.inputs {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.numbers {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	flex: 2;
+	background-color: #494848;
+	padding: 20px;
+	margin: 2.5%;
+	border-radius: 2.5px;
+}
+
+.num {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-basis: 30%;
+	height: 50px;
+	background-color: #adadad;
+	margin: 5px;
+	border-radius: 2.5px;
+	cursor: pointer;
+}
+
+.num:hover {
+	background-color: #777575;
+}
+
+.zero {
+	order: 1;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	background-color: #494848;
+	padding: 20px;
+	margin: 2.5%;
+	border-radius: 2.5px;
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+	background-color: #adadad;
+	margin: 5px;
+	border-radius: 2.5px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.cancel {
+	background-color: crimson;
+}
+
+.clear {
+	background-color: burlywood;
+}
+
+.enter {
+	background-color: lawngreen;
+}
+
+.cancel:hover {
+	background-color: rgb(161, 13, 43);
+}
+
+.clear:hover {
+	background-color: rgb(189, 142, 82);
+}
+
+.enter:hover {
+	background-color: rgb(101, 184, 19);
+}
+
+.balance {
+	position: absolute;
+}
