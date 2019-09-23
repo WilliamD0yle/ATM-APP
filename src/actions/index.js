@@ -70,3 +70,9 @@ export const clearError = () => dispatch => {
         type: 'CLEAR_ERROR'
     });
 };
+
+export const withdrawError = () => dispatch => {
+    dispatch({
+        type: 'WITHDRAW_ERROR'
+    });
+};

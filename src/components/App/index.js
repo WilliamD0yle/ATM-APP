@@ -8,7 +8,8 @@ import {
     clearWithdraw,
     clearPin,
     cancel,
-    clearError
+    clearError,
+    withdrawError
 } from '../../actions/';
 import Number from '../Number/';
 import logo from './logo.svg';
@@ -39,6 +40,11 @@ export const App = props => (
                 {props.authorised ? (
                     <code className="balance">
                         Current Balance: £{props.balance}
+                    </code>
+                ) : null}
+                {props.balance < 0 ? (
+                    <code className="balance-warning">
+                        OVERDRAWN 🤕
                     </code>
                 ) : null}
                 <code className="mainDisplay">{displayString(props)}</code>
@@ -75,7 +81,7 @@ export const App = props => (
                         onClick={
                             !props.authorised
                                 ? () => props.confirmPin(props.pin)
-                                : () => props.withdraw(props.withdrawAmount)
+                                : () => props.withdraw(props.balance, props.withdrawAmount)
                         }
                         className="button enter"
                     >
@@ -99,7 +105,13 @@ const mapDispatchToProps = dispatch => ({
     pinEntry: e => dispatch(pinEntry(`${e.target.dataset.value}`)),
     confirmPin: pin => dispatch(confirmPin(pin)),
     withdrawEntry: e => dispatch(withdrawEntry(e.target.dataset.value)),
-    withdraw: amount => dispatch(withdraw(amount)),
+    withdraw: (balance, amount) => {
+        if (balance - amount < -100) {
+            dispatch(withdrawError());
+        } else {
+            dispatch(withdraw(amount));
+        }
+    },
     clearWithdraw: () => dispatch(clearWithdraw()),
     clearPin: () => dispatch(clearPin()),
     cancel: () => dispatch(cancel()),

@@ -116,6 +116,15 @@ export default (state = INITIAL_STATE, action) => {
         case 'WITHDRAW_CLEAR':
             return { ...state, user: { ...state.user, withdrawAmount: 0 } };
 
+        case 'WITHDRAW_ERROR':
+            return {
+                ...state,
+                user: {
+                    ...state.user,
+                    error: 'Cannot be overdrawn by more than £100'
+                }
+            };
+
         case 'CLEAR_ERROR':
             return { ...state, user: { ...state.user, error: '' } };
 
